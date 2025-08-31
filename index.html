@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toju — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">Toju</a>
+    <nav class="nav" id="nav">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="index.html#contact" class="nav-link btn-cta">Contact Me</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero reveal">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Hi, I'm <span>Toju</span> — I design sleek <span>websites</span> and eye‑catching <span>thumbnails</span>.</h1>
+        <p>I help creators and brands look premium online. Clean layouts, fast pages, and thumbnails that boost clicks.</p>
+        <div class="cta-row">
+          <a href="services.html" class="btn">View Services</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="channels4_profile.jpg" alt="Portfolio preview" class="hero-img"/>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about reveal">
+    <div class="container about-grid">
+      <div class="about-img-wrap">
+        <img src="Snapchat-547226657.jpg" alt="Toju portrait placeholder" class="about-img">
+      </div>
+      <div class="about-copy">
+        <h2>About Me</h2>
+        <p>I’m a web and graphic designer who loves creating clean, fast, and effective designs. I keep things simple yet bold, making sure your message grabs attention. Whether it’s a landing page, portfolio site, or a custom YouTube thumbnail, I’ll make it look great and work smoothly.</p>
+        <a href="index.html#about" class="link-arrow">More about me <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services reveal">
+    <div class="container">
+      <h2 class="center">Services</h2>
+      <div class="cards">
+        <a href="web-design.html" class="card">
+          <div class="card-media"><img src="SUBSCRIBE) (4).png" alt="Web design service"></div>
+          <div class="card-body">
+            <h3>Web Design</h3>
+            <p>Modern, responsive websites that load fast and look sharp.</p>
+            <span class="chip">View Work</span>
+          </div>
+        </a>
+        <a href="thumbnail-design.html" class="card">
+          <div class="card-media"><img src="SUBSCRIBE) (5).png" alt="Thumbnail design service"></div>
+          <div class="card-body">
+            <h3>Thumbnail Design</h3>
+            <p>Scroll‑stopping YouTube thumbnails designed to increase CTR.</p>
+            <span class="chip">View Work</span>
+          </div>
+        </a>
+		 <a href="yt-banner-logo.html" class="card">
+          <div class="card-media"><img src="download (40).jfif" alt="Thumbnail design service"></div>
+          <div class="card-body">
+            <h3>YT Banner & Logo Design</h3>
+            <p>Channel-defining YouTube banners and logos designed for instant recognition.</p>
+            <span class="chip">View Work</span>
+          </div>
+        </a>
+      </div>
+      </div>
+      <div class="center mt-24">
+        <a href="services.html" class="btn btn-outline">See All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact reveal">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <h2>Contact Me</h2>
+        <p>Tell me about your project. I’ll reply within 24 hours.</p>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-envelope"></i> tojugolly7@gmail.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> Nigeria</li>
+        </ul>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/myzpryvr" method="POST">
+        <label>
+          Your Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Your Email
+          <input type="email" name="_replyto" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send Message</button>
+        <p class="form-note">Or reach me on socials below.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Toju. All rights reserved.</p>
+    <div class="socials">
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/itzz_toju" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

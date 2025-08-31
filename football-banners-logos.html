@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Banners & Logos</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">Toju</a>
+    <nav class="nav" id="nav">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="index.html#contact" class="nav-link btn-cta">Contact Me</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<h1 style="text-align:center;">Football Banners & Logos</h1>
+
+<div class="slider-container">
+  <button class="prev">&#10094;</button>
+  <div class="slides fade">
+    <img id="mainSlide" src="Screenshot_20250831_174655_YouTube.jpg" alt="Thumbnail 1">
+  </div>
+  <button class="next">&#10095;</button>
+
+  <div class="thumbnail-row">
+    <img src="Screenshot_20250831_174655_YouTube.jpg" alt="Thumbnail 1" class="active" onclick="changeSlide(0)">
+    <img src="Screenshot_20250831_174917_YouTube.jpg" alt="Thumbnail 2" onclick="changeSlide(1)">
+    <img src="Screenshot_20250831_175332_YouTube.jpg" alt="Thumbnail 3" onclick="changeSlide(2)">
+  </div>
+</div>
+
+<script>
+let thumbnails = document.querySelectorAll('.thumbnail-row img');
+let mainSlide = document.getElementById('mainSlide');
+let currentIndex = 0;
+let images = ["Screenshot_20250831_174655_YouTube.jpg", "Screenshot_20250831_174917_YouTube.jpg", "Screenshot_20250831_175332_YouTube.jpg"];
+
+function changeSlide(index) {
+  currentIndex = index;
+  mainSlide.src = images[currentIndex];
+  thumbnails.forEach(t => t.classList.remove('active'));
+  thumbnails[currentIndex].classList.add('active');
+}
+
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  changeSlide(currentIndex);
+});
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  changeSlide(currentIndex);
+});
+
+let startX = 0;
+let endX = 0;
+
+mainSlide.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+mainSlide.addEventListener('touchend', (e) => {
+  endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) {
+    currentIndex = (currentIndex + 1) % images.length;
+    changeSlide(currentIndex);
+  } else if (endX - startX > 50) {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    changeSlide(currentIndex);
+  }
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
